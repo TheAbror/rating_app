@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rating_app/ui/bloc/home_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rating_app/ui/widgets/home_page_background.dart';
 import 'package:rating_app/ui/widgets/home_page_body_item.dart';
 
