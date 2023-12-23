@@ -3,14 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rating_app/ui/widgets/home_page_background.dart';
 import 'package:rating_app/ui/widgets/home_page_body_item.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,9 +23,9 @@ class _HomePageState extends State<HomePage> {
                 onTap: () {
                   controller.openView();
                 },
-                onChanged: (_) {
-                  controller.openView();
-                },
+                // onChanged: (_) {
+                //   controller.openView();
+                // },
                 leading: const Icon(Icons.search),
                 trailing: <Widget>[
                   Tooltip(
@@ -38,9 +33,9 @@ class _HomePageState extends State<HomePage> {
                     child: IconButton(
                       isSelected: true,
                       onPressed: () {
-                        setState(() {
-                          // isDark = !isDark;
-                        });
+                        // setState(() {
+                        //   // isDark = !isDark;
+                        // });
                       },
                       icon: const Icon(Icons.wb_sunny_outlined),
                       selectedIcon: const Icon(Icons.brightness_2_outlined),
@@ -53,11 +48,11 @@ class _HomePageState extends State<HomePage> {
                 final String item = 'item $index';
                 return ListTile(
                   title: Text(item),
-                  onTap: () {
-                    setState(() {
-                      controller.closeView(item);
-                    });
-                  },
+                  // onTap: () {
+                  //   setState(() {
+                  //     controller.closeView(item);
+                  //   });
+                  // },
                 );
               });
             }),
