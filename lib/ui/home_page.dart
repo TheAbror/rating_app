@@ -11,10 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.symmetric(
-          horizontal: 10.w,
-          vertical: 50.h,
-        ),
+        padding: EdgeInsets.symmetric(vertical: 50.h),
         decoration: HomePageBackgroundColor(),
         child: Column(
           children: [
@@ -42,7 +39,7 @@ class HomePageBodyItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(right: 20.w, bottom: 20.h),
+      margin: EdgeInsets.only(right: 22.w, bottom: 25.h),
       child: Column(
         children: [
           Container(
@@ -55,8 +52,8 @@ class HomePageBodyItem extends StatelessWidget {
             ),
             child: Icon(
               Icons.school,
-              size: 30.sp,
-              color: AppColors.homeIcons,
+              size: 40.sp,
+              color: AppColors.bg3,
             ),
           ),
           SizedBox(height: 5.h),
