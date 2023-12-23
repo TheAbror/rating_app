@@ -18,10 +18,10 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 50.h),
             const Wrap(
               children: [
-                HomePageBodyItem(),
-                HomePageBodyItem(),
-                HomePageBodyItem(),
-                HomePageBodyItem(),
+                HomePageBodyItem(text: 'Schools', icon: 'assets/icons/icons8-school-100.png'),
+                // HomePageBodyItem(text: 'Restaurants'),
+                // HomePageBodyItem(text: 'Parks'),
+                // HomePageBodyItem(text: 'Coffee'),
               ],
             ),
           ],
@@ -32,8 +32,13 @@ class HomePage extends StatelessWidget {
 }
 
 class HomePageBodyItem extends StatelessWidget {
+  final String text;
+  final String icon;
+
   const HomePageBodyItem({
     super.key,
+    required this.text,
+    required this.icon,
   });
 
   @override
@@ -50,15 +55,11 @@ class HomePageBodyItem extends StatelessWidget {
               borderRadius: BorderRadius.circular(50.r),
               border: Border.all(color: AppColors.outline, width: 0.5.w),
             ),
-            child: Icon(
-              Icons.school,
-              size: 40.sp,
-              color: AppColors.bg3,
-            ),
+            child: Image.asset(icon),
           ),
           SizedBox(height: 5.h),
           Text(
-            'Restaurants',
+            text,
             style: TextStyle(
               fontWeight: FontWeight.w400,
               color: AppColors.homeIcons,
