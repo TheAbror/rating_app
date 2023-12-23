@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 50.h, horizontal: 27.w),
@@ -23,12 +22,7 @@ class HomePage extends StatelessWidget {
               return SearchBar(
                 controller: controller,
                 padding: const MaterialStatePropertyAll<EdgeInsets>(EdgeInsets.symmetric(horizontal: 16.0)),
-                onTap: () {
-                  controller.openView();
-                },
-                // onChanged: (_) {
-                //   controller.openView();
-                // },
+                onTap: () => controller.openView(),
                 leading: const Icon(Icons.search),
                 trailing: <Widget>[
                   Tooltip(
@@ -47,11 +41,6 @@ class HomePage extends StatelessWidget {
                 final String item = 'item $index';
                 return ListTile(
                   title: Text(item),
-                  // onTap: () {
-                  //   setState(() {
-                  //     controller.closeView(item);
-                  //   });
-                  // },
                 );
               });
             }),
