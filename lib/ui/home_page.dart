@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rating_app/ui/bloc/home_bloc.dart';
 import 'package:rating_app/ui/widgets/home_page_background.dart';
 import 'package:rating_app/ui/widgets/home_page_body_item.dart';
 
@@ -9,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 50.h, horizontal: 27.w),
@@ -32,11 +35,7 @@ class HomePage extends StatelessWidget {
                     message: 'Change brightness mode',
                     child: IconButton(
                       isSelected: true,
-                      onPressed: () {
-                        // setState(() {
-                        //   // isDark = !isDark;
-                        // });
-                      },
+                      onPressed: () => context.read<HomeBloc>().changeBrightness(),
                       icon: const Icon(Icons.wb_sunny_outlined),
                       selectedIcon: const Icon(Icons.brightness_2_outlined),
                     ),

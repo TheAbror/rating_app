@@ -6,4 +6,8 @@ part 'home_state.dart';
 
 class HomeBloc extends Cubit<HomeState> {
   HomeBloc() : super(HomeState.initial());
+
+  void changeBrightness() {
+    emit(state.copyWith(isDark: !state.isDark));
+  }
 }
