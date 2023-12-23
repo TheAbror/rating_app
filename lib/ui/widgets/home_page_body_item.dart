@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rating_app/core/colors/app_colors.dart';
+import 'package:rating_app/ui/bloc/home_bloc.dart';
 
 class HomePageBodyItem extends StatelessWidget {
   final String text;
   final String icon;
+  final HomeState state;
 
   const HomePageBodyItem({
     super.key,
     required this.text,
     required this.icon,
+    required this.state,
   });
 
   @override
@@ -33,7 +36,7 @@ class HomePageBodyItem extends StatelessWidget {
             text,
             style: TextStyle(
               fontWeight: FontWeight.w400,
-              color: AppColors.homeIcons,
+              color: !state.isDark ? AppColors.homeIcons : AppColors.textMain,
             ),
             textAlign: TextAlign.center,
             overflow: TextOverflow.ellipsis,
