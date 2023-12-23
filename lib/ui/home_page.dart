@@ -19,6 +19,7 @@ class _HomePageState extends State<HomePage> {
         padding: EdgeInsets.symmetric(vertical: 50.h, horizontal: 27.w),
         decoration: HomePageBackgroundColor(),
         child: ListView(
+          physics: BouncingScrollPhysics(),
           children: [
             SearchAnchor(builder: (BuildContext context, SearchController controller) {
               return SearchBar(
