@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rating_app/core/colors/app_colors.dart';
 
 // ignore: non_constant_identifier_names
 BoxDecoration HomePageBackgroundColor() {
@@ -7,9 +8,9 @@ BoxDecoration HomePageBackgroundColor() {
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
       colors: [
-        Color(0xff334554),
-        Color(0xff0b2435),
-        Color(0xff091f2c),
+        AppColors.bg1,
+        AppColors.bg2,
+        AppColors.bg3,
       ],
     ),
   );

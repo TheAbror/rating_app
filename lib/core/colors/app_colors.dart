@@ -39,4 +39,9 @@ class AppColors {
   static const Color emirald = Color(0XFF5DD39E);
   static const Color bittersweet = Color(0XFFFF715B);
   static const Color crayola = Color(0XFFFB6376);
+  //
+  static const Color homeIcons = Color(0xfff7eae0);
+  static const Color bg1 = Color(0xff334554);
+  static const Color bg2 = Color(0xff0b2435);
+  static const Color bg3 = Color(0xff091f2c);
 }

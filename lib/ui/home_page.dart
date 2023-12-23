@@ -41,23 +41,34 @@ class HomePageBodyItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: 80.w,
-          width: 80.w,
-          margin: EdgeInsets.only(right: 20.w, bottom: 20.h),
-          decoration: BoxDecoration(
-            color: const Color(0xfff7eae0),
-            borderRadius: BorderRadius.circular(50.r),
-            border: Border.all(color: AppColors.outline, width: 0.5.w),
+    return Container(
+      margin: EdgeInsets.only(right: 20.w, bottom: 20.h),
+      child: Column(
+        children: [
+          Container(
+            height: 80.w,
+            width: 80.w,
+            decoration: BoxDecoration(
+              color: AppColors.homeIcons,
+              borderRadius: BorderRadius.circular(50.r),
+              border: Border.all(color: AppColors.outline, width: 0.5.w),
+            ),
+            child: Icon(
+              Icons.school,
+              size: 30.sp,
+              color: AppColors.homeIcons,
+            ),
           ),
-        ),
-        Text(
-          'data',
-          style: TextStyle(color: const Color(0xfff7eae0)),
-        ),
-      ],
+          SizedBox(height: 5.h),
+          Text(
+            'Restaurants',
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              color: AppColors.homeIcons,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
