@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rating_app/core/colors/app_colors.dart';
 import 'package:rating_app/ui/widgets/home_page_background.dart';
+import 'package:rating_app/ui/widgets/home_page_body_item.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -16,56 +16,26 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             SizedBox(height: 50.h),
-            const Wrap(
-              children: [
-                HomePageBodyItem(text: 'Schools', icon: 'assets/icons/icons8-school-100.png'),
-                // HomePageBodyItem(text: 'Restaurants'),
-                // HomePageBodyItem(text: 'Parks'),
-                // HomePageBodyItem(text: 'Coffee'),
+            Wrap(
+              spacing: 27.w,
+              runSpacing: 15.h,
+              children: const [
+                HomePageBodyItem(text: 'Schools', icon: 'assets/icons/school.png'),
+                HomePageBodyItem(text: 'Restaurants', icon: 'assets/icons/restaurant.png'),
+                HomePageBodyItem(text: 'Parks', icon: 'assets/icons/park.png'),
+                HomePageBodyItem(text: 'Cars', icon: 'assets/icons/car-chevrolet.png'),
+                HomePageBodyItem(text: 'Fast Food', icon: 'assets/icons/fastfood.png'),
+                HomePageBodyItem(text: 'Hotels', icon: 'assets/icons/hotel.png'),
+                HomePageBodyItem(text: 'Kindergartens', icon: 'assets/icons/kindergarten.png'),
+                HomePageBodyItem(text: 'Social Media', icon: 'assets/icons/SocialMedia.png'),
+                HomePageBodyItem(text: 'Software Engineers', icon: 'assets/icons/softwareE.png'),
+                HomePageBodyItem(text: 'Software Engineers', icon: 'assets/icons/softwareE.png'),
+                HomePageBodyItem(text: 'Universities', icon: 'assets/icons/student.png'),
+                HomePageBodyItem(text: 'Video Platforms', icon: 'assets/icons/videoPlatform.png'),
               ],
             ),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class HomePageBodyItem extends StatelessWidget {
-  final String text;
-  final String icon;
-
-  const HomePageBodyItem({
-    super.key,
-    required this.text,
-    required this.icon,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.only(right: 22.w, bottom: 25.h),
-      child: Column(
-        children: [
-          Container(
-            height: 80.w,
-            width: 80.w,
-            decoration: BoxDecoration(
-              color: AppColors.homeIcons,
-              borderRadius: BorderRadius.circular(50.r),
-              border: Border.all(color: AppColors.outline, width: 0.5.w),
-            ),
-            child: Image.asset(icon),
-          ),
-          SizedBox(height: 5.h),
-          Text(
-            text,
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              color: AppColors.homeIcons,
-            ),
-          ),
-        ],
       ),
     );
   }
