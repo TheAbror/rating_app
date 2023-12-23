@@ -10,22 +10,54 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 16.w),
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(
+          horizontal: 10.w,
+          vertical: 50.h,
+        ),
         decoration: HomePageBackgroundColor(),
-        child: ListView(
+        child: Column(
           children: [
-            Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                color: const Color(0xfff7eae0),
-                borderRadius: BorderRadius.circular(50.r),
-                border: Border.all(color: AppColors.outline, width: 0.5.w),
-              ),
+            SizedBox(height: 50.h),
+            const Wrap(
+              children: [
+                HomePageBodyItem(),
+                HomePageBodyItem(),
+                HomePageBodyItem(),
+                HomePageBodyItem(),
+              ],
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class HomePageBodyItem extends StatelessWidget {
+  const HomePageBodyItem({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Container(
+          height: 80.w,
+          width: 80.w,
+          margin: EdgeInsets.only(right: 20.w, bottom: 20.h),
+          decoration: BoxDecoration(
+            color: const Color(0xfff7eae0),
+            borderRadius: BorderRadius.circular(50.r),
+            border: Border.all(color: AppColors.outline, width: 0.5.w),
+          ),
+        ),
+        Text(
+          'data',
+          style: TextStyle(color: const Color(0xfff7eae0)),
+        ),
+      ],
     );
   }
 }
