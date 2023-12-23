@@ -8,20 +8,27 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xff334554),
+              Color(0xff0b2435),
+              Color(0xff091f2c),
+            ],
+          ),
+        ),
         child: ListView(
           children: [
             Container(
               height: 200,
-              margin: EdgeInsets.only(left: 16.w),
               padding: EdgeInsets.all(8.w),
               decoration: BoxDecoration(
                 color: AppColors.textMain,
                 borderRadius: BorderRadius.circular(8.r),
-                border: Border.all(
-                  color: AppColors.outline,
-                  width: 0.5.w,
-                ),
+                border: Border.all(color: AppColors.outline, width: 0.5.w),
               ),
             ),
           ],
